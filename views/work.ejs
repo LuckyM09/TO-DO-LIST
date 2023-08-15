@@ -1,0 +1,21 @@
+<%- include("partials/header.ejs")  %>
+<section>
+    <div class="main">
+    <h1>WORK LIST</h1>
+    <div class="item">
+        <h3>To Do</h3>
+    <ul>
+        <li  contenteditable="true">Exercise at sharp 5'o clock <input class="check" type="checkbox"></li>
+        <li contenteditable="true">Meeting at sgarp 8'o clock <input class="check" type="checkbox"></li>  
+        <li contenteditable="true">Buying Grocires in Return <input class="check" type="checkbox"></li> 
+        <% for(i=0; i<newlistitem.length; i++) {%>
+        <li contenteditable="true">  <%= newlistitem[i] %> <input type="checkbox"> </li>
+        <% } %>
+    <form action="/" method="post">
+        <input class="text" type="textbox"  name="newitem" placeholder="New Task">
+        <input class="submit" type="submit" name="sub" placeholder="+">
+    </form>
+    </ul>
+</div>
+</div>
+</section>
